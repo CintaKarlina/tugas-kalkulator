@@ -4,10 +4,10 @@ function Solve(val) {
 }
 function Result() {
     var num1 = document.getElementById('res').value;
-    try{
-        var num2 = evel(num1.replace('x', '*'));
-        document.getElementById('res').value = 'Error';
-    }   catch {
+    try {
+        var num2 = eval(num1.replace(/x/g, '*'));
+        document.getElementById('res').value = num2;
+    } catch {
         document.getElementById('res').value = 'Error';
     }
 }
